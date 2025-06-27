@@ -1,0 +1,5 @@
+{
+    "movieTitleById133": "[draggable=\"true\"][data-film-id=\"133\"] > .conf-step__movie-title",
+    "movie": ".movie",
+    "button": ".acceptin-button"
+}
