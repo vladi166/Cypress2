@@ -39,6 +39,6 @@ describe('Admin tickets test', () => {
 			cy.get(':nth-child(2) > .ticket__details').should('contain', `${seat.row}/${seat.seat}`);
 		});
 		// Проверка даты
-		cy.get(':nth-child(4) > .ticket__details').should('contain', '27-06-2025');
+		cy.get(':nth-child(4) > .ticket__details').should('contain', '03-07-2025');
 	});
 })

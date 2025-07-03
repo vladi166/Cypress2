@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --record --key 872edeb6-e843-4f7f-9dfe-58e5f32e69fd"
+    "test": "npx cypress run --record --key 872edeb6-e843-4f7f-9dfe-58e5f32e69fd",
+    "cy:admin-movie": "cypress run --group admin-movie --ci-build-id local-003 --record --key 872edeb6-e843-4f7f-9dfe-58e5f32e69fd --spec 'cypress/e2e/admin-movie.cy.js'",
+    "cy:login_admin": "cypress run --group login_admin --ci-build-id local-003 --record --key 872edeb6-e843-4f7f-9dfe-58e5f32e69fd --spec 'cypress/e2e/login_admin.cy.js'",
+    "cy:movie": "cypress run --group movie --ci-build-id local-003 --record --key 872edeb6-e843-4f7f-9dfe-58e5f32e69fd --spec 'cypress/e2e/movie.cy.js'",
+    "cy:parallel": "npm-run-all --parallel cy:admin-movie cy:login_admin cy:movie"
   },
   "keywords": [],
   "author": "Vladislav Andreev",
@@ -11,5 +15,8 @@
   "description": "",
   "dependencies": {
     "cypress": "^14.5.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
